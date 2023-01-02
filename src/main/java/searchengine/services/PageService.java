@@ -13,4 +13,5 @@ public interface PageService{
     List<Page> getAll();
 
 
+    List<Page> findDuplicateByPath(Page page);
 }

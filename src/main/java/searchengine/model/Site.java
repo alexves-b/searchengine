@@ -36,6 +36,18 @@ public class Site {
     @Column(nullable = false)
     private String name;
 
+    @Override
+    public String toString() {
+        return "Site{" +
+                "id=" + id +
+                ", status=" + status +
+                ", statusTime=" + statusTime +
+                ", lastError='" + lastError + '\'' +
+                ", url='" + url + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
     @OneToMany(mappedBy = "site")
     private Set<Page> pageSet;
 

@@ -41,7 +41,6 @@ public class PageServiceImpl implements PageService {
         for (int j = 0; j < sitesList.size(); j++) {
                 Site site = new Site(j + 1, StatusType.INDEXING, LocalDateTime.now(), sitesList.get(j).getUrl(), sitesList.get(j).getName());
                 siteRepository.save(site);
-                siteRepository.delete(site);
                 idSite = j+1;
         }
         parseSite();
@@ -88,6 +87,12 @@ public class PageServiceImpl implements PageService {
     public List<Page> getAll() {
         return pageRepository.findAll();
     }
+
+    @Override
+    public List<Page> findDuplicateByPath(Page page) {
+        return pageRepository.findDuplicateByPath(page.getPath());
+    }
+
 
 
 

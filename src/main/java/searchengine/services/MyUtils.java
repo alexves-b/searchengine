@@ -42,9 +42,9 @@ public class MyUtils{
 
 
             if (doc.html().contains("<!doctype html>") && url.startsWith(site.getUrl())){
-                Page page = new Page(site,url.substring(site.getUrl().length()),code, doc.html());
+                Page page = new Page(site,url.substring(site.getUrl().length()-1),code, doc.html());
+                System.out.println(pageRepository.findDuplicateByPath(page.getPath()) + "fDup");
                 pageRepository.save(page);
-                System.out.println(pageRepository.count());
                    // System.out.println(url + " - " + site.getUrl());
             }
             //LemmaFinder lemmaFinder = LemmaFinder.getInstance();

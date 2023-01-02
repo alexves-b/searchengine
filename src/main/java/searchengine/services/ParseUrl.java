@@ -32,6 +32,7 @@ public class ParseUrl extends RecursiveTask<Set<String>> {
     protected Set <String> compute() throws ConcurrentModificationException{
         try {
             MyUtils myUtils = new MyUtils(pageRepository,site);
+            System.out.println(url);
             List <String> urlList = new ArrayList<>(myUtils.getSiteMap(url));
             List <ParseUrl> taskList = myUtils.taskList(urlList);
             for (ParseUrl task : taskList) {
