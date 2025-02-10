@@ -1,7 +1,7 @@
 # searchengine
 <h1 align="center">Hi there, I'm Alex Veselov!</a> 
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
-<h3 align="center">BYU Student, and Aspiring Java Programmer</h3>
+<h3 align="center">BYU Student, and  Java Programmer</h3>
 Добро пожаловать на страничуку проекта Search Engine :sun_with_face:.
 Поисковый движок по сайтам, ссылки и названия сайтов указанны в конфигурации проекта application.yaml.
 
