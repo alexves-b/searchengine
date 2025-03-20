@@ -1,6 +1,7 @@
 server:
   port: 8888
 
+
 # example values
 indexing-settings:
   sites:
